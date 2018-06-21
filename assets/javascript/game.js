@@ -12,7 +12,7 @@ function theGame() {
     var randomLetter = alphabet[Math.floor(Math.random() * 26)];
     var computerChoice = randomLetter;
 
-    console.log(computerChoice); //test
+    console.log(computerChoice);
 
     checkIfCorrect();
     function checkIfCorrect() {
@@ -69,7 +69,7 @@ function theGame() {
 
     function noGuessesLeft() {
         if (guessesLeft === 0) {
-            console.log("YOU LOSE."); //test
+            console.log("YOU LOSE.");
             alert("YOU LOSE!");
             losses = losses + 1
             document.getElementById("your-losses").innerHTML = losses;
@@ -77,7 +77,7 @@ function theGame() {
             resetGame();
 
         } else {
-            console.log("Incorrect. Try again"); //test
+            console.log("Incorrect. Try again");
             checkIfCorrect();
         }
 
