@@ -1,4 +1,4 @@
-//variables for game
+//Variables for game
 var wins = 0;
 var losses = 0;
 var guessesLeft = 12;
@@ -16,18 +16,17 @@ function theGame() {
 
     checkIfCorrect();
     function checkIfCorrect() {
-            //Users key selection
+                //Users key selection
         document.onkeyup = function (event) {
-            //then turns it into a lowercase string.
+                //then turns it into a lowercase to avoid CAPS issues.
             var userChoice = String.fromCharCode(event.keyCode).toLowerCase();
 
 
-            //if statement to prevent user from choosing a key that's not a letter
+                //if statement to prevent user from choosing a key that's not a letter
             if (event.keyCode < 65 || event.keyCode > 90) {
                 alert("Invalid Entry");
 
-                //else/if statement to stop user from guessing a letter they already guessed
-                //and to stop the guesses counter from being deducted for a previous guess
+                //Stops user from guessing same letter twice and prevents loss of guess
             } else if (yourGuess.indexOf(userChoice) >= 0) {
                 alert("You already guessed that!");
 
@@ -57,13 +56,14 @@ function theGame() {
             }
         }
     }
-
+            //These will reset the counters and such
     function resetGame() {
         guessesLeft = 12;
-        yourGuess = []; //reset array so it's empty
-        document.getElementById("guesses-left").innerHTML = guessesLeft; //reset display on screen
-        document.getElementById("your-guesses").innerHTML = yourGuess; //reset display on screen
-        theGame(); //restart the game with new computerChoice.
+        yourGuess = []; 
+        document.getElementById("guesses-left").innerHTML = guessesLeft;
+        document.getElementById("your-guesses").innerHTML = yourGuess; 
+            //RESTART GAME!
+        theGame(); 
 
     }
 
