@@ -12,6 +12,7 @@
 
     <style>
         body {
+            margin: 35px;
             padding-top: 15px;
             font-family: 'Libre Franklin', sans-serif;
             color: navy
@@ -29,6 +30,11 @@
             font-size: 12px;
             height: 50px;
         }
+
+        img.img-fluid.rounded-circle {
+            max-width: 200px;
+            max-height: 250px;
+        }
     </style>
 
 </head>
@@ -44,20 +50,21 @@
                     PSYCHIC GAME
                 </h1>
 
-                <h3><strong>Guess The Letter I'm Thinking Of!</strong></h3>
+                <h3>
+                    <strong>Guess The Letter I'm Thinking Of!</strong>
+                </h3>
             </div>
         </div>
     </div>
     <div class="container">
+    </div>
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col-lg-12">
+        <div class="col-md-4">
 
 
-                <p>Use your mind to guess the correct letter!
-
-                        <img src="assets/images/crystal_ball.jpg" class="img-fluid rounded-circle" alt="crystal ball">
+            <p>Use your mind to guess the correct letter!
 
                 <p>Wins:
                     <span id="your-wins">0</span>
@@ -71,9 +78,15 @@
                 <p>Your Guesses So Far:
                     <span id="your-guesses"> </span>
                 </p>
-            </div>
 
+                <div class="col-md-4"></div>
+
+                <img src="assets/images/crystal_ball.jpg" class="img-fluid rounded-circle" alt="Crystal Ball">
+
+                <div class="col-md-4"></div>
         </div>
+
+    </div>
 
 
 
